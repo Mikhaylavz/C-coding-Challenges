@@ -70,4 +70,4 @@ std::string xPronounce(std::string sentence)
     return s;
 }
 
-/*This is an edabit challenge solution*/
+/*This Challenge is from Edabit*/
