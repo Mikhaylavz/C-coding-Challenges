@@ -25,4 +25,4 @@ int combinations(std::vector<int> items)
 	return temp;
 }
 
-/*This is a Edabit challenge solution*/
+/*This Challenge is from Edabit*/
