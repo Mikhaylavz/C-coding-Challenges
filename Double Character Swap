@@ -1,0 +1,29 @@
+/*Challenge set by Helen Yu*/
+/*Write a function to replace all instances of character c1 with character c2 and vice versa.
+
+Examples
+doubleSwap("aabbccc", 'a', 'b') ➞ "bbaaccc"
+
+doubleSwap("random w#rds writt&n h&r&", '#', '&')
+➞ "random w&rds writt#n h#r#"
+
+doubleSwap("128 895 556 788 999", '8', '9')
+➞ "129 985 556 799 888"*/
+
+std::string doubleSwap(std::string s, char c1, char c2) {
+	    int n = s.length();
+
+    char char_array[n + 1];
+
+    strcpy(char_array, s.c_str());
+
+    for (int i = 0; i < n; i++)
+    {
+        if (char_array[i] == c1)
+        {
+            char_array[i] = c2;
+        }
+    }
+}
+
+/*This Challenge is from Edabit*/
