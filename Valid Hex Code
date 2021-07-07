@@ -1,0 +1,80 @@
+/*Challenge Set by Helen Yu*/
+
+/*
+Create a function that determines whether a string is a valid hex code.
+
+A hex code must begin with a pound key # and is exactly 6 characters in length. Each character must be a digit from 0-9 or an alphabetic character from A-F. All alphabetic characters may be uppercase or lowercase.
+
+Examples
+isValidHexCode("#CD5C5C") ➞ true
+
+isValidHexCode("#EAECEE") ➞ true
+
+isValidHexCode("#eaecee") ➞ true
+
+isValidHexCode("#CD5C58C") ➞ false
+// Length exceeds 6
+
+isValidHexCode("#CD5C5Z") ➞ false
+// Not all alphabetic characters in A-F
+
+isValidHexCode("#CD5C&C") ➞ false
+// Contains unacceptable character
+
+isValidHexCode("CD5C5C") ➞ false
+// Missing #
+*/
+
+bool isValidHexCode(std::string str) 
+{
+ int pass = 0;
+    if (str.size() != 7)
+    {
+        
+        return false;
+    }
+    else if (str[0] != '#')
+    {
+        
+        return false;
+    }
+    else
+    {
+        for (int i = 0; i < 7; i++)
+        {   
+           
+            if (str[i] == '#')
+            {
+                
+            }
+            else if (str[i] >= '0' && str[i] <= '9')
+            {
+                
+                  pass++;
+            }
+            else if(((int(str[i]) <= 70) && (int(str[i]) >= 65)))
+            {
+                
+                pass++;
+            }
+            else if(((int(str[i]) <= 102) && (int(str[i]) >= 97)))
+            {
+               
+                pass++;
+            }
+        }
+
+        if (pass == 6)
+        {
+            
+            return true;
+        }
+        else
+        {
+            
+            return false;
+        }
+    }
+}
+
+/*This is a edabit challenge*/
