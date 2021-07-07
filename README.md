@@ -1,4 +1,4 @@
-# C-coding-Challenges
+# Cpp-coding-Challenges
 C++ Coding Challenges
 
 Soltutions to coding challenges created by edabit
