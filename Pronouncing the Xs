@@ -1,0 +1,73 @@
+/*Challenge set by Matt*/
+
+/*Create a function which replaces all the x's in the string in the following ways:
+
+Replace all x's with "cks" UNLESS:
+
+The word begins with "x", therefore replace it with "z".
+The word is just the letter "x", therefore replace it with "ecks".*/
+/*
+Examples
+xPronounce("Inside the box was a xylophone") ➞ "Inside the bocks was a zylophone"
+
+xPronounce("The x ray is excellent") ➞ "The ecks ray is eckscellent"
+
+xPronounce("OMG x box unboxing video x D") ➞ "OMG ecks bocks unbocksing video ecks D"
+*/
+
+std::string xPronounce(std::string sentence) 
+{
+	  std::string s;
+    int size = sentence.size();
+
+    char arr[size + 1];
+    std::vector<char>arr2;
+
+    strcpy(arr, sentence.c_str());
+
+    for (int j = 0; j < size; j++)
+    {
+        arr2.push_back(arr[j]);
+    }
+
+
+    for (int i = 0; i < arr2.size(); i++)
+    {
+        if (arr2[i] == 'x' || arr2[i] == 'X')
+        {
+            if (arr2[i - 1] == ' ' && arr2[i +1] != ' ')
+            {
+                arr2[i] = 'z';
+            }
+            else if(arr2[i - 1] == ' ' && arr2[i + 1] == ' ')
+            {
+              arr2.erase(arr2.begin() + i);
+							
+							 arr2.insert(arr2.begin() + i,'s');
+							 arr2.insert(arr2.begin() + i,'k');
+							 arr2.insert(arr2.begin() + i,'c');
+							 arr2.insert(arr2.begin() + i,'e');
+						}
+						else
+						{
+							 arr2.erase(arr2.begin() + i);
+							
+							 arr2.insert(arr2.begin() + i, 's');
+							 arr2.insert(arr2.begin() + i, 'k');
+							 arr2.insert(arr2.begin() + i,'c');
+							 
+						}
+               
+               
+            
+        }
+    }
+
+    for (int k = 0; k < arr2.size(); k++)
+    {
+        s.push_back(arr2[k]);
+    }
+    return s;
+}
+
+/*This is an edabit challenge solution*/
