@@ -1,0 +1,65 @@
+/*Challenge set by Matt*/
+/*Create a function that returns true if two strings share the same letter pattern, and false otherwise.
+
+Examples
+sameLetterPattern("ABAB", "CDCD") ➞ true
+
+sameLetterPattern("ABCBA", "BCDCB") ➞ true
+
+sameLetterPattern("FFGG", "CDCD") ➞ false
+
+sameLetterPattern("FFFF", "ABCD") ➞ false
+*/
+
+bool sameLetterPattern(std::string str1, std::string str2)
+{
+	 int size = str1.length();
+    std::vector<char>letters1;
+    std::vector<char>letters2;
+    int temp;
+    
+    char char_array1[size + 1];
+    char char_array2[size + 1];
+    strcpy(char_array1, str1.c_str());
+    strcpy(char_array2, str2.c_str());
+
+    for (int i = 0; i < size; i++)
+    {
+        for(int j = 0; j = size; j++)
+        {
+            if (char_array1[i] != letters1[j])
+            {
+                temp++;
+            }
+            
+        }
+        if(temp == size)
+        {
+            letters1[i] = i;
+        }
+
+        for (int j = 0; j = size; j++)
+        {
+            if (char_array2[i] != letters2[j])
+            {
+                temp++;
+            }
+
+        }
+        if (temp == size)
+        {
+            letters2[i] = i;
+        }
+         
+    }
+    if (letters1 == letters2)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }	
+}
+
+/*This is a edabit challenge soltuion*/
