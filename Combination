@@ -1,0 +1,28 @@
+
+/*Set by Mubashir Hassan*/
+/*
+Create a function that takes an array of numbers, each number representing the number of items in a group, and returns the number of permutations (combinations) of items that you could get by taking one item from each group.
+
+Examples
+combinations([2, 3]) ➞ 6
+
+combinations([3, 7, 4]) ➞ 84
+
+combinations([2, 3, 4, 5]) ➞ 120
+*/
+
+int combinations(std::vector<int> items)
+{
+	int temp = 1;
+	for(int i = 0; i < items.size(); i++)
+	{
+		if(items[i] != 0)
+		{
+			temp = temp*items[i];
+		}
+		
+	}
+	return temp;
+}
+
+/*This is a Edabit challenge solution*/
