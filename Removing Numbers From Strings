@@ -1,0 +1,36 @@
+
+/*Challenge set by Mubashir Hassan*/
+/*Mubashir wants to remove numbers from a given string!
+
+Help him by fixing the code in the code tab to pass this challenge. Look at the examples below to get an idea of what the function should do.*/
+
+
+
+#include <iostream>
+std::string removeNumbers(std::string str);
+
+int main()
+{
+	std :: string ans;
+	ans = removeNumbers("mubashir1");
+	std::cout << ans << std::endl;
+	ans = removeNumbers("12ma23tt");
+	std::cout << ans << std::endl;
+	ans = removeNumbers("e1d2a3b4i5t6");
+	std::cout << ans << std::endl;
+}
+std::string removeNumbers(std::string str)
+{
+	std::string result = "";
+
+	for (auto i : str) {
+		if (i < '0' || i > '9') {
+			result.push_back(i);
+		}
+	}
+
+	return result;
+
+}
+
+/*Edabit Challenge*/
