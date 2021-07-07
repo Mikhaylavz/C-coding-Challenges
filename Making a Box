@@ -1,0 +1,44 @@
+/*Challenge set by Helen Yu*/
+
+/*Create a function that creates a box based on dimension n.
+
+Examples
+makeBox(5) ➞ [
+  "#####",
+  "#   #",
+  "#   #",
+  "#   #",
+  "#####"
+]
+
+makeBox(3) ➞ [
+  "###",
+  "# #",
+  "###"
+]
+
+makeBox(2) ➞ [
+  "##",
+  "##"
+]
+
+makeBox(1) ➞ [
+  "#"
+]*/
+
+std::vector<std::string> makeBox(int n) 
+{
+    std::vector<std::string> arr;
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            arr[j]=("#");
+        }
+        arr[i]=("\n");
+    }
+    return arr;
+}
+
+/*This is a Edabit Challenge*/
