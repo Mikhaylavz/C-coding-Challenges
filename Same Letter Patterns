@@ -62,4 +62,4 @@ bool sameLetterPattern(std::string str1, std::string str2)
     }	
 }
 
-/*This is a edabit challenge soltuion*/
+/*This Challenge is from Edabit*/
