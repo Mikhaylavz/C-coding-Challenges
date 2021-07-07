@@ -1,0 +1,39 @@
+/*This was set by Helen Yu */
+
+/*Create a function that tweaks letters by one forward (+1) or backwards (-1) according to an array.*/
+
+/*tweakLetters("apple", {0, 1, -1, 0, -1}) ➞ "aqold"
+// "p" + 1 => "q"; "p" - 1 => "o"; "e" - 1 => "d"
+
+tweakLetters("many", {0, 0, 0, -1}) ➞ "manx"
+
+tweakLetters("rhino", {1, 1, 1, 1, 1}) ➞ "sijop"*/
+
+
+std::string tweakLetters(std::string s, std::vector<int> arr) {
+ int StringSize = s.size();
+    int arrSize = arr.size();
+    
+    
+    for (int i = 0; i < StringSize; i++)
+    {
+
+            s[i] = int(s[i]) + arr[i];
+            if (s[i] == 123)
+            {
+                s[i] = 97;
+                
+            }
+            else if (s[i] == 96)
+            {
+                s[i] = 122;
+            }
+
+    
+    }
+
+
+    return s;
+}
+
+/*This is a Edabit Challenge*/
