@@ -24,4 +24,4 @@ int quadraticEquation(int a, int b, int c) {
 }
 
 
-/*This is a Edabit Challenge solution*/
+/*This Challenge is from Edabit*/
