@@ -36,4 +36,4 @@ std::string uncensor(std::string str, std::string vowels)
 }
 
 
-/*This is a Edabit challenge solution*/
+/*This Challenge is from Edabit*/
