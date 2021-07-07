@@ -1,0 +1,27 @@
+/*Challenge set by Matt*/
+/*
+Create a function to find only the root value of x in any quadratic equation ax^2 + bx + c. The function will take three arguments:
+
+a as the coefficient of x^2
+b as the coefficient of x
+c as the constant term
+Examples
+quadraticEquation(1, 2, -3) ➞ 1
+
+quadraticEquation(2, -7, 3) ➞ 3
+
+quadraticEquation(1, -12, -28) ➞ 14 */
+
+#include <cmath>
+
+int quadraticEquation(int a, int b, int c) {
+
+	float x;
+	x = sqrt((b * b) - (4 * a * c));
+	x = -b + x;
+	x = x / (2 * a);
+	printf("%f",x);
+}
+
+
+/*This is a Edabit Challenge solution*/
